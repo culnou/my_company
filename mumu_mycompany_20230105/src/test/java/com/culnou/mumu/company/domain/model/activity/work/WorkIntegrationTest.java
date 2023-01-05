@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.culnou.mumu.company.domain.model.activity.workflow.WorkflowId;
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class WorkTest {
+public class WorkIntegrationTest {
 	
 	
 	@Autowired
@@ -31,6 +31,7 @@ public class WorkTest {
     
 	@Test
 	public void test() throws Exception{
+		System.out.println("********** my company integration test1 **********");
 		List<Work> works = registry.findWorksOfWorkflow(new WorkflowId("111"), WorkType.Doing);
 		System.out.println(works.size());
 	}
